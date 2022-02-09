@@ -1,2 +1,32 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class BMICalculator{
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Weight in pounds: ");
+        double weightP = input.nextDouble();
+
+        System.out.print("Height in feet: ");
+        int heightF = input.nextInt();
+
+        System.out.print("Height in inches: ");
+       int heightI = input.nextInt();
+
+       int totalHeight= heightF*12 + heightI;
+
+
+        input.close();
+
+
+        double bmi = weightP/Math.pow(totalHeight, 2)*703;
+        DecimalFormat df = new DecimalFormat("0.00");
+        System.out.println("Your BMI is = "+ df.format(bmi));
+
+
+
+    }
+
+
+    }
